@@ -9,22 +9,14 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 
-if ($_SESSION['role'] != 'admin') {
-    echo "You are not allowed to view this page, please login as admin";
+if ($_SESSION['role'] != 'administrator') {
+    echo "You are not allowed to view this page, please login as administrator";
     exit;
 }
 
 require 'header.php';
-
-// $sql = "SELECT * FROM users JOIN user_settings ON user_settings.user_id = users.id WHERE users.id =  1";
-
 require 'database.php';
 
-// $sql = "SELECT COUNT(id) AS total_users, 
-//                SUM(CASE WHEN role = 'employee' THEN 1 ELSE 0 END) AS total_employees 
-//         FROM users";
-// $result = mysqli_query($conn, $sql);
-// $data = mysqli_fetch_assoc($result);
 
 $sql = [];
 $query = "SELECT COUNT(id) AS total FROM users";

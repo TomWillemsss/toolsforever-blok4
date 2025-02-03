@@ -18,7 +18,7 @@
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="">Merken</a></li>
+                <li><a href="brands_index.php">Merken</a></li>
                 <li><a href="">Winkelmand</a></li>
                 <?php if (isset($_SESSION['user_id'])) : ?>
                     <li><a href="dashboard.php">Dashboard</a></li>
