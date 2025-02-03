@@ -1,3 +1,6 @@
-FROM phpmyadmin/phpmyadmin:latest
+FROM php:8.2-apache
 
-COPY ./.docker/phpmyadmin/config.inc.php /etc/phpmyadmin/config.inc.php
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+
+

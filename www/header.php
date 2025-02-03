@@ -26,14 +26,14 @@
                         <a href="">Gebruikers</a>
                         <div class="dropdown-content">
                             <a href="users_index.php">Bekijken</a>
-                            <a href="users_add.php">Toevoegen</a>
+                            <a href="users_create.php">Toevoegen</a>
                         </div>
                     </li>
                     <li class="dropdown">
                         <a href="">Gereedschap</a>
                         <div class="dropdown-content">
-                            <a href="tool_index.php">Bekijken</a>
-                            <a href="tool_create.php">Toevoegen</a>
+                            <a href="tools_index.php">Bekijken</a>
+                            <a href="tools_create.php">Toevoegen</a>
                         </div>
                     </li>
                     <li><a href="logout.php" class="btn btn-danger">Uitloggen</a></li>

@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-if ($_SESSION['role'] != 'admin') {
+if ($_SESSION['role'] != 'administrator') {
     echo "You are not allowed to view this page, please login as admin";
     exit;
 }
@@ -40,9 +40,12 @@ require 'header.php';
                     <td><?php echo $tool['tool_price'] ?></td>
                     <td><?php echo $tool['tool_brand'] ?></td>
                     <td>
-                        <a href="tool_detail.php?id=<?php echo $tool['tool_id'] ?>">Bekijk</a>
-                        <a href="tool_edit.php?id=<?php echo $tool['tool_id'] ?>">Wijzig</a>
-                        <a href="tool_delete.php?id=<?php echo $tool['tool_id'] ?>">Verwijder</a>
+
+                        <a href="tools_detail.php?id=<?php echo $tool['tool_id'] ?>">Bekijk</a>
+                        Wijzig
+                        Verwijder
+                        <!-- <a href="tools_edit.php?id=<?php echo $tool['tool_id'] ?>">Wijzig</a>
+                        <a href="tools_delete.php?id=<?php echo $tool['tool_id'] ?>">Verwijder</a> -->
                     </td>
                 </tr>
             <?php endforeach; ?>
