@@ -42,10 +42,10 @@ require 'header.php';
                     <td>
 
                         <a href="tools_detail.php?id=<?php echo $tool['tool_id'] ?>">Bekijk</a>
-                        Wijzig
-                        Verwijder
-                        <!-- <a href="tools_edit.php?id=<?php echo $tool['tool_id'] ?>">Wijzig</a>
-                        <a href="tools_delete.php?id=<?php echo $tool['tool_id'] ?>">Verwijder</a> -->
+                       
+                        <?php echo $tool['tool_id'] ?></a>
+                        <a href="tools_delete.php?id=<?php echo $tool['tool_id'] ?>" onclick="return confirm('weet je het zeker')">Verwijder</a>
+                       
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -53,3 +53,5 @@ require 'header.php';
     </table>
 </main>
 <?php require 'footer.php' ?>
+
+
