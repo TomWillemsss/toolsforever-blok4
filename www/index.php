@@ -1,19 +1,19 @@
 <?php
 session_start();
 require 'database.php';
-
+ 
 $sql = "SELECT * FROM tools";
 $result = mysqli_query($conn, $sql);
 $tools = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-
+ 
+ 
 require 'header.php';
 ?>
-
-
+ 
+ 
 <main>
     <div class="container">
-
+ 
         <!-- show products here -->
         <?php foreach ($tools as $tool) : ?>
             <div class="product">
@@ -22,11 +22,11 @@ require 'header.php';
                 <p>€ <?php echo number_format($tool['tool_price'] / 100, 2, ',', '') ?></p>
                 <a href="tools_detail.php?id=<?php echo $tool['tool_id'] ?>">Bekijk</a>
             </div>
-
+ 
         <?php endforeach; ?>
-
+ 
     </div>
-
+ 
 </main>
-
+ 
 <?php require 'footer.php' ?>

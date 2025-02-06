@@ -20,6 +20,8 @@ require 'header.php';
                 <img src="<?php echo isset($brand['brand_image']) ? 'images/' . $brand['brand_image'] : 'https://placehold.co/200' ?>" alt="<?php echo $brand['brand_name'] ?>">
                 <h3><?php echo $brand['brand_name'] ?></h3>
 
+                <a href="brands_delete.php?id=<?php echo $brand['brand_id'] ?>" onclick="return confirm('weet je het zeker')">Verwijder</a>
+
             </div>
         <?php endforeach; ?>
     </div>

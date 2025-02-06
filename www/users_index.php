@@ -44,8 +44,8 @@ require 'header.php';
                             <a href="users_detail.php?id=<?php echo $user['id'] ?>">Bekijk</a>
                             Wijzig
                             Verwijder
-                            <!-- <a href="users_edit.php?id=<?php echo $user['id'] ?>">Wijzig</a>
-                            <a href="users_delete.php?id=<?php echo $user['id'] ?>">Verwijder</a> -->
+                            
+                            <a href="users_delete.php?id=<?php echo $user['id'] ?>" onclick="return confirm('weet je het zeker')">Verwijder</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
